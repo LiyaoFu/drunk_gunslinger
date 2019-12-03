@@ -19,7 +19,7 @@ public class Enemy_initiate : MonoBehaviour
 		if (range <= 0.0f)
 		{
 			shoot();
-		    	range = 3.0f;
+		    range = 3.0f;
 		}
 		else
 		{
@@ -30,6 +30,7 @@ public class Enemy_initiate : MonoBehaviour
 	{
         GameObject B = Instantiate(bullet, transform.position, transform.rotation);
         B.transform.parent = null;
+        B.GetComponent<Bullet_hit>().origin = this.gameObject;
     }
 	void move()
 	{

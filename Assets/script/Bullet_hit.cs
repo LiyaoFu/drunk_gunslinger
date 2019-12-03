@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Bullet_hit : MonoBehaviour
 {
+    public GameObject origin;
     public float range;
     bool flag;
     void Start()
@@ -11,22 +12,12 @@ public class Bullet_hit : MonoBehaviour
         range = 0.1f;
         flag = false;
     }
-    void Update()
-    {
-        if (flag == false)
-        {
-            range -= Time.deltaTime;
-            if (range <= 0.0f)
-            {
-                flag = true;
-            }
-        }
-    }
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (flag==true && (other.tag == "enemy" || other.tag == "Player"))
+        GameObject target = other.gameObject;
+        if (target != origin && target.tag == "enemy" )
         {
-            Destroy(other.gameObject);
+            target.GetComponent<Enemy_initiate>().health--;
             Destroy(this.gameObject);
         }
         

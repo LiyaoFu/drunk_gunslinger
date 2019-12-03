@@ -5,6 +5,7 @@ using UnityEngine;
 public class shoot : MonoBehaviour
 {
     [SerializeField] GameObject bullet;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +21,7 @@ public class shoot : MonoBehaviour
         {
             GameObject B = Instantiate(bullet, transform.position, transform.rotation);
             B.transform.parent = null;
+            B.GetComponent<Bullet_hit>().origin = this.gameObject;
         }
         
         
