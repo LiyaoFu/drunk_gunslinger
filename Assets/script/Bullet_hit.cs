@@ -15,9 +15,9 @@ public class Bullet_hit : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         GameObject target = other.gameObject;
-        if (target != origin && target.tag == "enemy" )
+        if (target != origin && (target.tag == "enemy" || target.tag == "Player"))
         {
-            target.GetComponent<Enemy_initiate>().health--;
+            target.GetComponent<Damageble>().health--;
             Destroy(this.gameObject);
         }
         

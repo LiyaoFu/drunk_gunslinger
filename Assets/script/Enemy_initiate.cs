@@ -4,17 +4,15 @@ using UnityEngine;
 
 public class Enemy_initiate : MonoBehaviour
 {
-	public int health;
 	public float range;
     [SerializeField] GameObject bullet;
     void Start()
-	{
-		health = 5;
+    { 
 		range = 3.0f;
 	}
 	void Update()
 	{
-		if(health<=0) Destroy(this.gameObject);
+		
 		range -= Time.deltaTime;
 		if (range <= 0.0f)
 		{
