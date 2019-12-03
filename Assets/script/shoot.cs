@@ -18,7 +18,6 @@ public class shoot : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Debug.Log(1);
             GameObject B = Instantiate(bullet, transform.position, transform.rotation);
             B.transform.parent = null;
         }
