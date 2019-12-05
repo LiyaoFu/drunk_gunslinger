@@ -5,21 +5,14 @@ using UnityEngine;
 public class Bullet_hit : MonoBehaviour
 {
     public GameObject origin;
-    public float range;
-    bool flag;
-    void Start()
-    {
-        range = 0.1f;
-        flag = false;
-    }
     void OnTriggerEnter2D(Collider2D other)
     {
         GameObject target = other.gameObject;
-        if (target != origin && (target.tag == "enemy" || target.tag == "Player"))
+        if (target != origin && (target.tag == "obstacle" || target.tag == "enemy" || target.tag == "Player"))
         {
             target.GetComponent<Damageble>().health--;
             Destroy(this.gameObject);
         }
-        
+
     }
 }

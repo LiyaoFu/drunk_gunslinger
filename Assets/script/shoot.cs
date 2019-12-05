@@ -5,7 +5,7 @@ using UnityEngine;
 public class shoot : MonoBehaviour
 {
     [SerializeField] GameObject bullet;
-
+    public float range = 0.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,16 +14,27 @@ public class shoot : MonoBehaviour
     {
 
     }
+
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if(range <= 0.0f)
         {
-            GameObject B = Instantiate(bullet, transform.position, transform.rotation);
-            B.transform.parent = null;
-            B.GetComponent<Bullet_hit>().origin = this.gameObject;
+            if (Input.GetMouseButtonDown(0))
+            {
+                GameObject B = Instantiate(bullet, transform.position, transform.rotation);
+                B.transform.parent = null;
+                B.GetComponent<Bullet_hit>().origin = this.gameObject;
+                range = 0.0f;
+            }
+            
+
         }
-        
-        
+        else
+        {
+            range -= Time.deltaTime;
+        }
+
+
     }
 }

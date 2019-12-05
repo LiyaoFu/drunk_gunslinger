@@ -10,7 +10,7 @@ public class bullet_velocity : MonoBehaviour
     {
         Vector3 vec = transform.rotation.eulerAngles;
         float rotation = Mathf.Deg2Rad*vec.z;
-        GetComponent<Rigidbody2D>().velocity = new Vector2(Mathf.Cos(rotation), Mathf.Sin(rotation)) * 10;
+        GetComponent<Rigidbody2D>().velocity = new Vector2(Mathf.Cos(rotation), Mathf.Sin(rotation)) * 30;
     }
 
     // Update is called once per frame

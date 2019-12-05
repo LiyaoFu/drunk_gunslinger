@@ -3,7 +3,9 @@ guid: 3f4f814ce582daa4aa63bba4bbca0489
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - Enemies: {fileID: 11400000, guid: 8ff5b43fa7e63ac4e979332fc67d3f5c, type: 2}
+  - bullet: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 5638977223385980254}
   - component: {fileID: 5638977223385980252}
   - component: {fileID: 5057606285250921549}
+  - component: {fileID: 5495041621954053305}
   m_Layer: 0
   m_Name: The_cowboy
   m_TagString: Player
@@ -196,6 +197,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 2811789557758048888, guid: 0b3231accb00a5543b3e0cad2ce80288, type: 3}
+  range: 1
 --- !u!114 &5057606285250921549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,4 +210,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fed4a2b80c5c6b41b263d3ccf1287ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Enemies: {fileID: 11400000, guid: 8ff5b43fa7e63ac4e979332fc67d3f5c, type: 2}
+  healthbar: {fileID: 0}
   health: 3
+--- !u!114 &5495041621954053305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5638977223385980195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cb8a005a5e16374e895edf44283bff6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Enemies: {fileID: 11400000, guid: 8ff5b43fa7e63ac4e979332fc67d3f5c, type: 2}
